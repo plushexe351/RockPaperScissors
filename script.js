@@ -58,7 +58,7 @@ document.querySelector('.reset').addEventListener('click', () => {
     setTimeout(() => {
         result.style.display = "none";
         round.innerHTML = "1/5";
-        chances = 2, Score2 = 0, Score1 = 0;
+        chances = 2, playerScore = 0, computerScore = 0;
         score1.textContent = 0;
         score2.textContent = 0;
     }, 400);
