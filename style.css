@@ -41,11 +41,11 @@ h1#heading {
   border-radius: 30px;
   min-height: 65vh;
   margin: 30px auto;
-  transition: 1s ease;
+  transition: 0.3s ease;
 }
 .result {
   display: none;
-  min-height: 15vh;
+  min-height: 25vh;
 }
 .container > *,
 .result > * {
@@ -57,7 +57,7 @@ h1#heading {
   gap: 90px;
   flex: 1;
   text-align: center;
-  transition: 0.4s ease;
+  transition: 0.2s ease;
 }
 .player,
 .winner {
@@ -92,11 +92,12 @@ h1#heading {
   align-items: center;
   transition: 0.3s ease;
 }
-.container img:hover {
-  scale: 1.1;
+.player img:hover {
+  scale: 1.2;
   transform: translate(0px, -10px);
+  filter: drop-shadow(0 0 10px rgb(84, 0, 84));
 }
-.container img:active {
+.player img:active {
   scale: 0.9;
 }
 .choices {
@@ -122,10 +123,13 @@ h1#heading {
     width: auto;
   }
   .container > * {
-    gap: 20px;
+    gap: 10px;
     border-radius: 14px;
   }
   .reset:hover {
     flex: 1;
+  }
+  .choices {
+    gap: 0;
   }
 }
