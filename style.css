@@ -100,8 +100,8 @@ h1#heading {
   transition: 0.3s ease;
 }
 .player img:hover {
-  scale: 1.2;
-  transform: translate(0px, -10px);
+  scale: 1.1;
+  /* transform: translate(0px, -10px); */
   filter: drop-shadow(0 0 10px rgb(84, 0, 84));
 }
 .player img:active {
