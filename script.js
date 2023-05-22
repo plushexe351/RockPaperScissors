@@ -12,6 +12,7 @@ const score2 = document.querySelector('#computerScore');
 const score1 = document.querySelector('#playerScore');
 const result = document.querySelector('.result');
 const winner = document.querySelector('.winner');
+const log = document.querySelector('.log');
 round.innerHTML = `${chances}/5`;
 
 choices.forEach(choice => {
@@ -28,11 +29,15 @@ choices.forEach(choice => {
             `<img src="images/rps_${computerSelection.toLowerCase()}.png">`;
 
 
-        if (playRound(playerSelection, computerSelection) == 'Computer Wins ! Better luck next time...')
+        if (playRound(playerSelection, computerSelection) == 'Computer Wins ! Better luck next time...') {
             score2.innerHTML = ++computerScore;
-
-        if (playRound(playerSelection, computerSelection) == 'You Win !')
+            log.textContent = `You lose this round ! ${computerSelection} beats ${playerSelection}`;
+        }
+        else if (playRound(playerSelection, computerSelection) == 'You Win !') {
             score1.innerHTML = ++playerScore;
+            log.textContent = `You win this round ! ${playerSelection} beats ${computerSelection}`;
+        }
+        else log.textContent = `This round's a Tie`;
 
         if (playerScore > computerScore)
             win_msg = "You Win!";
@@ -58,6 +63,7 @@ document.querySelector('.reset').addEventListener('click', () => {
         chances = 0, playerScore = 0, computerScore = 0;
         score1.textContent = 0;
         score2.textContent = 0;
+        log.textContent = "";
     }, 400);
 })
 

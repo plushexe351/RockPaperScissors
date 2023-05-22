@@ -33,6 +33,12 @@ h1#heading {
 #round {
   color: white;
 }
+.log {
+  color: white;
+  text-align: center;
+  margin: 30px;
+  font-size: 20px;
+}
 .container,
 .result {
   display: flex;
