@@ -45,7 +45,7 @@ choices.forEach(choice => {
                 win_msg = "You Win!";
 
             else if (computerScore > playerScore)
-                win_msg = "You Lost :(";
+                win_msg = "You Lost";
 
             else if (computerScore == playerScore)
                 win_msg = "Tie!";
