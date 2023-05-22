@@ -127,6 +127,7 @@ h1#heading {
   .result {
     flex-direction: column;
     gap: 10px;
+    width: 85vw;
   }
   .container img,
   .computerchoice img {
