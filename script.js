@@ -3,7 +3,7 @@ function getComputerChoice() {
     return choice[Math.floor(Math.random() * 3)];
 }
 
-let chances = 2;
+let chances = 1;
 let win_msg;
 let playerScore = 0, computerScore = 0;
 const choices = document.querySelectorAll('.choices img');
@@ -12,7 +12,7 @@ const score2 = document.querySelector('#computerScore');
 const score1 = document.querySelector('#playerScore');
 const result = document.querySelector('.result');
 const winner = document.querySelector('.winner');
-round.innerHTML = `1/5`;
+round.innerHTML = `0/5`;
 
 choices.forEach(choice => {
     choice.addEventListener('click', () => {
@@ -57,7 +57,7 @@ choices.forEach(choice => {
 document.querySelector('.reset').addEventListener('click', () => {
     setTimeout(() => {
         result.style.display = "none";
-        round.innerHTML = "1/5";
+        round.innerHTML = "0/5";
         chances = 2, playerScore = 0, computerScore = 0;
         score1.textContent = 0;
         score2.textContent = 0;
