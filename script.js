@@ -84,15 +84,15 @@ function playRound(playerSelection, computerSelection) {
         return 'Tie !';
 
     if (playerSelection == "PAPER" && computerSelection == "SCISSOR")
-        return 'Computer Wins ! Better luck next time...'
+        return 'Computer Wins ! Better luck next time...';
 
     if (playerSelection == "SCISSOR" && computerSelection == "ROCK")
-        return 'Computer Wins ! Better luck next time...'
+        return 'Computer Wins ! Better luck next time...';
 
     if (playerSelection == "SCISSOR" && computerSelection == "PAPER")
-        return 'You Win !'
+        return 'You Win !';
 
     if (playerSelection == "SCISSOR" && computerSelection == "SCISSOR")
-        return 'Tie !'
+        return 'Tie !';
 
 }
