@@ -19,15 +19,15 @@ function getComputerChoice() {
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
-        return 'Tie !';
+        return -1;
     } else if (
         (playerSelection === 'rock' && computerSelection === 'scissor') ||
         (playerSelection === 'paper' && computerSelection === 'rock') ||
         (playerSelection === 'scissor' && computerSelection === 'paper')
     ) {
-        return 'You Win !';
+        return 1;
     } else {
-        return 'Computer Wins ! Better luck next time...';
+        return 0;
     }
 }
 
@@ -45,10 +45,10 @@ choices.forEach(choice => {
 
             const roundResult = playRound(playerSelection, computerSelection);
 
-            if (roundResult === 'Computer Wins ! Better luck next time...') {
+            if (roundResult == 0) {
                 score2Element.innerHTML = ++computerScore;
                 logElement.textContent = `You lose this round ! ${computerSelection} beats ${playerSelection}`;
-            } else if (roundResult === 'You Win !') {
+            } else if (roundResult == 1) {
                 score1Element.innerHTML = ++playerScore;
                 logElement.textContent = `You win this round ! ${playerSelection} beats ${computerSelection}`;
             } else {
