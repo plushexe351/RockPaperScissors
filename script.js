@@ -55,7 +55,7 @@ choices.forEach(choice => {
                 logElement.textContent = `This round's a Tie`;
             }
 
-            win_msg = (playerScore > computerScore) ? 'You Win!' : (computerScore > playerScore) ? 'You Lost' : 'Tie!';
+            win_msg = (playerScore > computerScore) ? 'You Win !' : (computerScore > playerScore) ? 'You Lost !' : 'Tie!';
 
             if (chances === 5) {
                 playable = false;
